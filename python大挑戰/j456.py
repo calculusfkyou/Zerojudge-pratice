@@ -2,11 +2,9 @@ def gcd(a, b):
     while b != 0:
         a, b = b, a % b
     return a
-while True:
-    try:
-        num1=int(input())
-        num2 =int(input())
-        result = gcd(num1, num2)
-        
-    except EOFError:
-        break
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+a = int(input())
+b = int(input())
+lcm_result = lcm(a, b)
+print(lcm_result)
